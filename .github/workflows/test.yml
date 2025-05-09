@@ -20,6 +20,9 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Print ulimits
+        run: ulimit -Sa && ulimit -Ha
+
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1
 
